@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_default"
+    app:startDestination="@id/viewHome">
+
+    <fragment
+        android:id="@+id/viewHome"
+        android:name="com.example.assignmentbalusonawane.ui.view.ViewHome"
+        android:label="ViewHome" >
+        <action
+            android:id="@+id/action_viewHome_to_viewIconSets"
+            app:destination="@id/nav_icons_sets" />
+    </fragment>
+    <navigation android:id="@+id/nav_icons_sets"
+        app:startDestination="@id/viewIconSets">
+        <fragment
+            android:id="@+id/viewIconSets"
+            android:name="com.example.assignmentbalusonawane.ui.view.ViewIconSets"
+            android:label="ViewIconSets">
+            <action
+                android:id="@+id/action_viewIconSets_to_viewIcons"
+                app:destination="@id/viewIcons" />
+        </fragment>
+        <fragment
+            android:id="@+id/viewIcons"
+            android:name="com.example.assignmentbalusonawane.ui.view.ViewIcons"
+            android:label="ViewIcons">
+            <action
+                android:id="@+id/action_viewIcons_to_viewIconDetail"
+                app:destination="@id/viewIconDetail" />
+        </fragment>
+        <fragment
+            android:id="@+id/viewIconDetail"
+            android:name="com.example.assignmentbalusonawane.ui.view.ViewIconDetail"
+            android:label="ViewIconDetail" />
+    </navigation>
+</navigation>
